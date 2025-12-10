@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [RequireComponent (typeof(Terrain))]
 public class ProceduralTerrainGenerator : MonoBehaviour
