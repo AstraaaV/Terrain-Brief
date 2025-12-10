@@ -3466,6 +3466,12 @@ MonoBehaviour:
   lacunarity: 2
   seed: 0
   offset: {x: 0, y: 0}
+  grassLayer: {fileID: 8574412962073106934, guid: e70236d121cff6c4d90a73f0736adc76, type: 2}
+  rockLayer: {fileID: 8574412962073106934, guid: ff666a2956af9f24bb962c3fc25a7524, type: 2}
+  snowLayer: {fileID: 8574412962073106934, guid: 8f836fc44a8ba3e47809e7a11555a58b, type: 2}
+  rockStartHeight: 0.1
+  snowStartHeight: 0.4
+  slopeAngleThreshold: 20
 --- !u!154 &1438597301
 TerrainCollider:
   m_ObjectHideFlags: 0
