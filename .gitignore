@@ -1,0 +1,42 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Bb]ackup*/
+[Uu]serSettings/
+
+# Visual Studio cache
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity auto-generated files
+*.manifest
+*.meta
+
+# Crash logs
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.exe
+
+# Rider / JetBrains
+.idea/
+*.ipr
+*.iws
+
+# Misc
+.DS_Store
