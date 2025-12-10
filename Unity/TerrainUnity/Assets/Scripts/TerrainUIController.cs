@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class TerrainUIController : MonoBehaviour 
 {
     public ProceduralTerrainGenerator generator;
@@ -12,6 +13,9 @@ public class TerrainUIController : MonoBehaviour
 
     public Button regenerateButton;
 
+    public TMP_Text seedValueText;
+    public Button randomiseSeedButton;
+
     private void Start()
     {
         if (generator == null)
@@ -20,16 +24,28 @@ public class TerrainUIController : MonoBehaviour
             return;
         }
 
+        if (seedValueText != null )
+        {
+            seedValueText.text = generator.seed.ToString();
+        }
+
         noiseScaleSlider.onValueChanged.AddListener(OnNoiseScaleChanged);
         heightMultiplierSlider.onValueChanged.AddListener(OnHeightMultiplierChanged);
         octavesSlider.onValueChanged.AddListener(OnOctavesChanged);
         persistenceSlider.onValueChanged.AddListener(OnPersistenceChanged);
         lacunaritySlider.onValueChanged.AddListener(OnLacunarityChanged);
 
-        // Button
+        // Regenerate Terrain Button
         regenerateButton.onClick.AddListener(() =>
         {
             generator.GenerateTerrain();
+        });
+
+        // Randomise Seed Button
+        randomiseSeedButton.onClick.AddListener(() =>
+        {
+            generator.RandomiseSeed();
+            seedValueText.text = generator.seed.ToString();
         });
 
         noiseScaleSlider.value = generator.noiseScale;

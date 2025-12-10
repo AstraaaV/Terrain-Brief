@@ -60,4 +60,10 @@ public class ProceduralTerrainGenerator : MonoBehaviour
 
         Debug.Log("Terrain Generated!");
     }
+
+    public void RandomiseSeed()
+    {
+        seed = Random.Range(0, 999999);
+        GenerateTerrain();
+    }
 }
