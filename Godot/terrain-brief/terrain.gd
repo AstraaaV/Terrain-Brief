@@ -42,6 +42,10 @@ func generate_terrain():
 			st.add_vertex(v2)
 			st.add_vertex(v4)
 			st.add_vertex(v3)
-	st.generate_normals
+	st.generate_normals()
 	
 	mesh = st.commit()
+
+func _on_button_pressed():
+	noise.seed = randi()
+	generate_terrain()

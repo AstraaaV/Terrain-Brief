@@ -11,3 +11,12 @@ script = ExtResource("1_ek7wi")
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 25, 50, 70)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RegenerateButton" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Regenerate Terrain"
+
+[connection signal="pressed" from="CanvasLayer/RegenerateButton" to="Terrain" method="_on_button_pressed"]
