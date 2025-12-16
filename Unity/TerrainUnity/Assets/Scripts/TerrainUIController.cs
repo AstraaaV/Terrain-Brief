@@ -12,6 +12,9 @@ public class TerrainUIController : MonoBehaviour
     public Slider lacunaritySlider;
 
     public Button regenerateButton;
+    public Button plainsButton;
+    public Button mountainsButton;
+    public Button snowypeaksButton;
 
     public TMP_Text seedValueText;
     public Button randomiseSeedButton;

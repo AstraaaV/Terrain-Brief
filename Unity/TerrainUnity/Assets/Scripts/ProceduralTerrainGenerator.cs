@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[RequireComponent (typeof(Terrain))]
+[RequireComponent(typeof(Terrain))]
 public class ProceduralTerrainGenerator : MonoBehaviour
 {
     public int width = 513;
@@ -110,23 +110,23 @@ public class ProceduralTerrainGenerator : MonoBehaviour
                 weights[1] = 0f;
                 weights[2] = 0f;
 
-                if(slope > slopeAngleThreshold)
+                if (slope > slopeAngleThreshold)
                 {
                     weights[0] = 0.4f;
                     weights[1] = 0.6f;
                 }
 
-                if(terrainHeight > snowStartHeight)
+                if (terrainHeight > snowStartHeight)
                 {
                     weights[0] = 0f;
                     weights[1] = 0f;
                     weights[2] = 1f;
                 }
 
-               
+
                 float total = weights[0] + weights[1] + weights[2];
 
-                for(int i = 0; i < 3; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     weights[i] /= total;
                 }

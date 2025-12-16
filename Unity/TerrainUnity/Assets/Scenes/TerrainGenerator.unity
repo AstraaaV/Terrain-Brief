@@ -3288,6 +3288,9 @@ MonoBehaviour:
   persistenceSlider: {fileID: 289006982}
   lacunaritySlider: {fileID: 1343517857}
   regenerateButton: {fileID: 2039919875}
+  plainsButton: {fileID: 0}
+  mountainsButton: {fileID: 0}
+  snowypeaksButton: {fileID: 0}
   seedValueText: {fileID: 376105892}
   randomiseSeedButton: {fileID: 1013658510}
 --- !u!1 &1338351442
