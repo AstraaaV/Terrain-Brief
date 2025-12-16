@@ -1,5 +1,7 @@
 extends MeshInstance3D
 # This script procedurally generates terrain
+# NOTE: for larger terrains, could be chunked into tiles
+# or gen at lower resolution for distant terrain (LOD).
 
 # Exposed parameters
 # The below variabes are exposed to the Inspector
@@ -13,6 +15,7 @@ extends MeshInstance3D
 
 # Used to generate Perlin Noise
 var noise := FastNoiseLite.new()
+
 var terrain_material: StandardMaterial3D
 
 # Called when the node enters the scene tree for the first time.
@@ -106,7 +109,7 @@ func height_to_color(height: float) -> Color:
 		
 	# Snow
 	else:
-		return Color(1.0, 1.0, 1.0) # White
+		return Color(1.0, 1.0, 1.0)
 
 # UI interaction - called when regenerate button is pressed
 func _on_button_pressed():
